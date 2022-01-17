@@ -70,6 +70,14 @@ App = {
     }
   },
 
+  createTask: async()=>{
+
+    App.setLoading(true)
+    const content = $('#newTask').val()
+    await App.todoList.createTask(content, {from: App.account });
+    window.location.reload()
+  },
+
   setLoading: async (boolean) => {
     App.loading = boolean;
 
