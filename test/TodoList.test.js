@@ -21,7 +21,7 @@ contract("TodoList", (account) =>{
         const task = await this.todoList.tasks(taskCount)
 
         assert.equal(task.id.toNumber(), taskCount.toNumber())
-        assert.equal(task.content, "Check out daapuniversity.com")
+        assert.equal(task.content, "Task Demo")
         assert.equal(task.completed, false)
         assert.equal(taskCount.toNumber(), 1)
 
